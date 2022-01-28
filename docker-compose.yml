@@ -1,0 +1,26 @@
+---
+version: "2.4"
+networks:
+    default:
+        name: integration-testing
+services:
+    anti-fraud:
+        image: docker.io/cleclerc/anti-fraud:latest
+        ports:
+            - "8080:8080"
+        healthcheck:
+            interval: 20s
+            retries: 10
+            test:
+                - CMD-SHELL
+                - curl -s -k http://localhost:8080
+    otel-collector:
+        image: otel/opentelemetry-collector-contrib-dev:latest
+        command:
+            - /otelcol
+            - --config=/otel-collector.yml
+        ports:
+            - "4317"
+        volumes:
+            - ./otel-collector.yml:/otel-collector.yml
+            - ./:/tmp
