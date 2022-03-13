@@ -14,7 +14,7 @@ pipeline {
                             usernameVariable: 'CONTAINER_REGISTRY_USERNAME')]) {
 
                         sh (
-                        label: 'mvn deploy spring-boot:build-image',
+                        label: './mvnw deploy spring-boot:build-image',
                         script: 'export OTEL_TRACES_EXPORTER="otlp" && ./mvnw deploy')
                         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
                     }
