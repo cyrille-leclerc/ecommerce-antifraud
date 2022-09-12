@@ -33,6 +33,15 @@
     </dependencies>
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <!--
+                https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-2806360
+                https://security.snyk.io/vuln/SNYK-JAVA-ORGYAML-3016891
+                -->
+                <groupId>org.yaml</groupId>
+                <artifactId>snakeyaml</artifactId>
+                <version>1.31</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
 
