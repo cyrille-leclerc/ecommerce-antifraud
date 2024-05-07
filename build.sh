@@ -4,4 +4,4 @@ if [ -r "setenv.sh" ]; then
   . "setenv.sh"
 fi
 
-mvn deploy
+mvn package
