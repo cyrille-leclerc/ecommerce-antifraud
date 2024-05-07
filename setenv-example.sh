@@ -1,4 +1,3 @@
 #export OTEL_EXPORTER_OTLP_ENDPOINT="http://localhost:4317"
-export SNYK_TOKEN="..."
 export CONTAINER_REGISTRY_USERNAME="..."
 export CONTAINER_REGISTRY_PASSWORD="..."
