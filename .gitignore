@@ -52,3 +52,5 @@ private/
 setenv.sh
 
 
+.gradle
+build/
