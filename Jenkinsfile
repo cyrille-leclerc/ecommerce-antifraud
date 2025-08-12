@@ -16,9 +16,12 @@ pipeline {
                             passwordVariable: 'CONTAINER_REGISTRY_PASSWORD',
                             usernameVariable: 'CONTAINER_REGISTRY_USERNAME')]) {
 
-                        sh (
-                        label: 'mvn deploy spring-boot:build-image',
-                        script: './mvnw deploy')
+                        // sh (
+                        // label: 'mvn deploy spring-boot:build-image',
+                        //script: './mvnw deploy')
+                                               // sh (
+                        // label: 'mvn package',
+                        //script: './mvnw package')
                         archiveArtifacts artifacts: '**/target/*.jar', fingerprint: true
                     }
                 }
