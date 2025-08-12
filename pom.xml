@@ -51,12 +51,14 @@
                             <goal>repackage</goal>
                         </goals>
                     </execution>
+                    <!--
                     <execution>
                         <id>build-image</id>
                         <goals>
                             <goal>build-image</goal>
                         </goals>
                     </execution>
+                    -->
                 </executions>
                 <configuration>
                     <image>
